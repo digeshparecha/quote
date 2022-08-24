@@ -15,3 +15,6 @@ Steps to Setup Project
 * run 'rails db:setup'
 * run 'bin/dev' to start the server
 * visit 'http://localhost:3000/'
+* login using this cred. 
+    email:- accountant@kpmg.com
+    password:- password
