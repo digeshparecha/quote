@@ -1,0 +1,9 @@
+<%= turbo_stream.replace @line_item do %>
+  <%= render @line_item, bid: @bid, line_item_date: @line_item_date %>
+<% end %>
+
+<%= turbo_stream.update dom_id(@bid, :total) do %>
+  <%= render "bids/total", bid: @bid %>
+<% end %>
+
+<%= render_turbo_stream_flash_messages %>

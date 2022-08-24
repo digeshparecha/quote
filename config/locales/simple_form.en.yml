@@ -1,0 +1,32 @@
+en:
+  simple_form:
+    placeholders:
+      bid:
+        name: Name of your bid
+      line_item:
+        name: Name of your item
+        description: Description (optional)
+        quantity: 1
+        unit_price: $100.00
+    labels:
+      bid:
+        name: Name
+      line_item:
+        name: Name
+        description: Description
+        quantity: Quantity
+        unit_price: Unit price
+      line_item_date:
+        date: Date
+
+  helpers:
+    submit:
+      bid:
+        create: Create bid
+        update: Update bid
+      line_item:
+        create: Create item
+        update: Update item
+      line_item_date:
+        create: Create date
+        update: Update date

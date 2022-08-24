@@ -1,0 +1,10 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to bid"), bid_path(@bid) %>
+
+  <div class="header">
+    <h1>Edit bid</h1>
+  </div>
+  <%= turbo_frame_tag @bid do %>
+    <%= render "form", bid: @bid %>
+  <% end %>
+</main>

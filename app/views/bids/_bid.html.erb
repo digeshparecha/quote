@@ -1,0 +1,14 @@
+<%= turbo_frame_tag bid do %>
+  <div class="bid">
+    <%= link_to bid.name, bid_path(bid), data: { turbo_frame: "_top" } %>
+    <div class="bid__actions">
+      <%= button_to "Delete",
+                    bid_path(bid),
+                    method: :delete,
+                    class: "btn btn--light" %>
+      <%= link_to "Edit",
+                  edit_bid_path(bid),
+                  class: "btn btn--light" %>
+    </div>
+  </div>
+<% end %>

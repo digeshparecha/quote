@@ -1,0 +1,21 @@
+<main class="container mb-xxxxl">
+  <%= link_to sanitize("&larr; Back to bids"), bids_path %>
+  <div class="header">
+    <h1><%= @bid.name %></h1>
+    <%= link_to "New date",
+                new_bid_line_item_date_path(@bid),
+                class: "btn btn--primary" ,
+                data: { turbo_frame: dom_id(LineItemDate.new) }%>
+  </div>
+
+  <%= turbo_frame_tag LineItemDate.new %>
+  
+  <%= turbo_frame_tag "line_item_dates" do %>
+   <%= render @line_item_dates, bid: @bid %>
+  <% end %>
+</main>
+
+<%= turbo_frame_tag dom_id(@bid, :total) do %>
+  <%= render "bids/total", bid: @bid %>
+<% end %>
+

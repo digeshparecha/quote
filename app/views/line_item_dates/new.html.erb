@@ -1,0 +1,10 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to bid"), bid_path(@bid) %>
+
+  <div class="header">
+    <h1>New date</h1>
+  </div>
+  <%= turbo_frame_tag @line_item_date do %>
+    <%= render "form", bid: @bid, line_item_date: @line_item_date %>
+  <% end %>
+</main>

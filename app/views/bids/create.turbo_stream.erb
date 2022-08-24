@@ -1,0 +1,3 @@
+<%= turbo_stream.prepend "bids", partial: "bids/bid", locals: { bid: @bid } %>
+<%= turbo_stream.update Bid.new, "" %>
+<%= render_turbo_stream_flash_messages %>
