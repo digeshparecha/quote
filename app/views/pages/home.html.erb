@@ -3,8 +3,8 @@
   <p>A blazing fast bid editor built with Hotwire</p>
 
   <% if user_signed_in? %>
-    <%= link_to "View bids", bids_path, class: "btn btn--dark" %>
+    <%= link_to "View bids", bids_path, class: "btn btn-dark" %>
   <% else %>
-    <%= link_to "Sign in", new_user_session_path, class: "btn btn--dark" %>
+    <%= link_to "Sign in", new_user_session_path, class: "btn btn-dark" %>
   <% end %>
 </main>

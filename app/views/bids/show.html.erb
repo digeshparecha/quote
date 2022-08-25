@@ -4,7 +4,7 @@
     <h1><%= @bid.name %></h1>
     <%= link_to "New date",
                 new_bid_line_item_date_path(@bid),
-                class: "btn btn--primary" ,
+                class: "btn btn-primary" ,
                 data: { turbo_frame: dom_id(LineItemDate.new) }%>
   </div>
 

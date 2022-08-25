@@ -21,10 +21,10 @@
       <%= button_to "Delete",
                     [bid, line_item_date, line_item],
                     method: :delete,
-                    class: "btn btn--light" %>
+                    class: "btn btn-danger" %>
       <%= link_to "Edit",
                   [:edit, bid, line_item_date, line_item],
-                  class: "btn btn--light" %>
+                  class: "btn btn-secondary" %>
     </div>
   </div>
 <% end %>

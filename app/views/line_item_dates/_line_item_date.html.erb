@@ -11,10 +11,10 @@
                         [bid, line_item_date],
                         method: :delete,
                         form: { data: { turbo_confirm: "Are you sure?" } },
-                        class: "btn btn--light" %>
+                        class: "btn btn-danger" %>
           <%= link_to "Edit",
                       [:edit, bid, line_item_date],
-                      class: "btn btn--light" %>
+                      class: "btn btn-secondary" %>
         </div>
       </div>
     <% end %>
@@ -36,7 +36,7 @@
         <%= link_to "Add item",
                     [:new, bid, line_item_date, :line_item],
                     data: { turbo_frame: nested_dom_id(line_item_date, LineItem.new) },
-                    class: "btn btn--primary" %>
+                    class: "btn btn-primary" %>
       </div>
     </div>
 

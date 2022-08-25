@@ -3,7 +3,7 @@
 <main class="container">
   <div class="header">
     <h1>Bids</h1>
-    <%= link_to "New bid", new_bid_path, class: "btn btn--primary", data: { turbo_frame: dom_id(Bid.new) } %>
+    <%= link_to "New bid", new_bid_path, class: "btn btn-primary", data: { turbo_frame: dom_id(Bid.new) } %>
   </div>
 
   <%= turbo_frame_tag Bid.new %>
