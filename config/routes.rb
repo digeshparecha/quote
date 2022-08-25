@@ -9,4 +9,5 @@ Rails.application.routes.draw do
       resources :line_items, except: [:index, :show]
     end
   end
+  resources :users, only: [:update, :show]
 end

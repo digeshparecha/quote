@@ -8,6 +8,18 @@ en:
         description: Description (optional)
         quantity: 1
         unit_price: $100.00
+      user:
+        email: Email
+        password: Password
+        name: Name
+        address: Address
+        age: Age
+        bio: Bio
+        city: City
+        country: Country
+        dob: Date of Birth
+        phone: Phone
+        zip: Zip
     labels:
       bid:
         name: Name
@@ -18,6 +30,18 @@ en:
         unit_price: Unit price
       line_item_date:
         date: Date
+      user:
+        email: Email
+        password: Password
+        name: Name
+        address: Address
+        age: Age
+        bio: Bio
+        city: City
+        country: Country
+        dob: Date of Birth
+        phone: Phone
+        zip: Zip
 
   helpers:
     submit:

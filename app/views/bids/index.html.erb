@@ -1,6 +1,6 @@
 <%= turbo_stream_from current_company, "bids" %>
 
-<main class="container">
+<main class="container shadow-lg p-3 mb-5 bg-body rounded">
   <div class="header">
     <h1>Bids</h1>
     <%= link_to "New bid", new_bid_path, class: "btn btn-primary", data: { turbo_frame: dom_id(Bid.new) } %>
