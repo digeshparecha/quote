@@ -6,6 +6,15 @@
     <%= link_to "New bid", new_bid_path, class: "btn btn-primary", data: { turbo_frame: dom_id(Bid.new) } %>
   </div>
 
+  <%= form_tag bids_path, method: :get, class: "bid form mb-5 border", data: { turbo_frame: "bids", turbo_action: "advance", 
+      controller: "search", action:"input->search#submit" } do |f| %>
+    <div class="form__group">
+      <%= text_field_tag "query", params[:query], placeholder: "Search bid..", class: "form__input required" %>
+    </div>
+    <%= link_to "Reset", bids_path, class: "btn btn-secondary" %>
+    <%= submit_tag "Search", class: "btn btn-success" %>
+  <% end %>
+
   <%= turbo_frame_tag Bid.new %>
   <%= turbo_frame_tag "bids" do %>
     <%= render "bids/empty_state" %>

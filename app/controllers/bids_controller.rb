@@ -2,7 +2,7 @@ class BidsController < ApplicationController
   before_action :set_bid, only: [:show, :edit, :update, :destroy]
 
   def index
-    @bids = current_company.bids.ordered
+    @bids = Bid.search(current_company.id, params)
   end
 
   def show

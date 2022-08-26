@@ -26,4 +26,10 @@ class Bid < ApplicationRecord
   def total_price
     line_items.sum(&:total_price)
   end
+
+  def self.search(company_id, params)
+    current_company_bids = "company_id = #{company_id}" 
+    current_company_bids += " AND name LIKE '%#{sanitize_sql_like(params[:query])}%'" unless params[:query].blank?
+    where(current_company_bids).ordered
+  end
 end
