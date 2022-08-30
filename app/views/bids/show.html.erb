@@ -11,7 +11,8 @@
   <%= turbo_frame_tag LineItemDate.new %>
   
   <%= turbo_frame_tag "line_item_dates" do %>
-   <%= render @line_item_dates, bid: @bid %>
+    <%= render "line_item_dates/empty_state",  bid: @bid %>
+    <%= render @line_item_dates, bid: @bid %>
   <% end %>
 </main>
 
