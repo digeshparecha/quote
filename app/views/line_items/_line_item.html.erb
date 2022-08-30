@@ -18,13 +18,15 @@
       <%= number_to_currency line_item.unit_price %>
     </div>
     <div class="line-item__actions">
-      <%= button_to "Delete",
-                    [bid, line_item_date, line_item],
+      <%= button_to [bid, line_item_date, line_item],
                     method: :delete,
-                    class: "btn btn-danger" %>
-      <%= link_to "Edit",
-                  [:edit, bid, line_item_date, line_item],
-                  class: "btn btn-secondary" %>
+                    class: "btn btn-danger" do %>
+        <i class="bi bi-trash"></i>
+      <% end %>
+      <%= link_to [:edit, bid, line_item_date, line_item],
+                  class: "btn btn-secondary" do %>
+        <i class="bi bi-pencil-square"></i>
+      <% end %>
     </div>
   </div>
 <% end %>

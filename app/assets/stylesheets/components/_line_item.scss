@@ -68,8 +68,9 @@
     gap: var(--space-xs);
     order: 2;
     flex: 1 1 auto;
-
+    
     @include media(tabletAndUp) {
+      justify-content: end;
       order: revert;
       flex: 0 0 10rem;
     }

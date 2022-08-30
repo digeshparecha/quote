@@ -7,14 +7,16 @@
         </h2>
 
         <div class="line-item-date__actions">
-          <%= button_to "Delete",
-                        [bid, line_item_date],
+          <%= button_to [bid, line_item_date],
                         method: :delete,
                         form: { data: { turbo_confirm: "Are you sure?" } },
-                        class: "btn btn-danger" %>
-          <%= link_to "Edit",
-                      [:edit, bid, line_item_date],
-                      class: "btn btn-secondary" %>
+                        class: "btn btn-danger" do %>
+            <i class="bi bi-trash"></i>
+          <% end %>
+          <%= link_to [:edit, bid, line_item_date],
+                      class: "btn btn-secondary" do %>
+            <i class="bi bi-pencil-square"></i>
+          <% end %>
         </div>
       </div>
     <% end %>
