@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   belongs_to :company
 
-  PROFILE_FIELDS = %i[name bio age dob phone country city zip address].freeze
+  PROFILE_FIELDS = %i[name age dob bio phone address city zip country].freeze
 
   def profile_complete?
     profile_complete == 100

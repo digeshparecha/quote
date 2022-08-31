@@ -54,3 +54,5 @@ en:
       line_item_date:
         create: Create date
         update: Update date
+      user:
+        update: Update

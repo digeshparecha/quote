@@ -1,21 +1,45 @@
 <main class="container">
   <% if current_user.profile_complete? %>
-  <div class="row shadow-lg p-3 mb-5 bg-body rounded">
-    <div class="col-8">
-      Here's what I know about you:
-      <ul class="mt-4">
-        <li class="leading-8">Your name is <strong><%= current_user.name %>.</strong></li>
-        <li class="leading-8">You are <strong><%= current_user.age %> years old.</strong></li>
-        <li class="leading-8">You live in <strong><%= current_user.country %>.</strong></li>
-        <li class="leading-8">Your address is <strong><%= current_user.address %>, <%= current_user.city %>, <%= current_user.zip %></strong></li>
-        <li class="leading-8">Your email is <strong><%= current_user.email %></strong></li>
-        <li class="leading-8">About you:<br /><strong><%= current_user.bio %></strong></li>
-      </ul>
-    </div>
-    <div class="col-4">
+    <div class="row shadow-lg p-3 mb-5 bg-body rounded">
+      <div class="col-8">
+        <%= turbo_frame_tag current_user do %>
+          <div class= "d-flex mb-3">
+            <h2 class="flex-grow-1">Your Profile</h2>
+            <%= link_to [:edit, current_user],
+                        class: "btn btn-secondary" do %>
+              <i class="bi bi-pencil-square"></i>
+            <% end %>
+          </div>
+          <div class="bid d-block">
+            <p class="text-secondary mb-1">Name</p>
+            <b><%= current_user.name %></b>
+          </div>
+          <div class="bid d-block">
+            <p class="text-secondary mb-1">Age</p>
+            <b><%= current_user.age %></b>
+          </div>
+          <div class="bid d-block">
+            <p class="text-secondary mb-1">Country</p>
+            <b><%= current_user.country %></b>
+          </div>
+          <div class="bid d-block">
+            <p class="text-secondary mb-1">Address</p>
+            <b><%= current_user.address %>, <br> <%= current_user.city %> - <%= current_user.zip %></b>
+          </div>
+          <div class="bid d-block">
+            <p class="text-secondary mb-1">Email</p>
+            <b><%= current_user.email %></b>
+          </div>
+          <div class="bid d-block">
+            <p class="text-secondary mb-1">About you</p>
+            <b><%= current_user.bio %></b>
+          </div>   
+        <% end %>   
+      </div>
+      <div class="col-4">
         <img class="me-4 rounded" src="https://api.lorem.space/image/face?w=260&h=260" />
       </div>
-  <div>
+    <div>
   <% else %>
     <div class="row shadow-lg p-3 mb-5 bg-body rounded">
       <div class = "col-8">
