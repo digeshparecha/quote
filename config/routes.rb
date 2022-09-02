@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "pages#home"
+  get "export_csv", to: "pages#export_csv"
   resources :bids do
     resources :line_item_dates, except: [:index, :show] do 
       resources :line_items, except: [:index, :show]

@@ -2,7 +2,10 @@
 
 <main class="container shadow-lg p-3 mb-5 bg-body rounded">
   <div class="header">
-    <h1>Bids</h1>
+    <h1 class="flex-grow-1">Bids</h1>
+    <%= link_to export_csv_path(format: :csv, company: current_user.company_id, type: "bids"), class: "btn btn-outline-success", title: "Download as a Csv" do %>
+      <i class="bi bi-download"></i>
+    <% end %>
     <%= link_to "New bid", new_bid_path, class: "btn btn-primary", data: { turbo_frame: dom_id(Bid.new) } %>
   </div>
 
