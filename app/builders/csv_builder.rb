@@ -10,14 +10,6 @@ class CsvBuilder < BaseBuilder
     generate_csv("Bid", bids)
   end
 
-  def built_line_item_dates
-    
-  end
-
-  def built_line_items
-    
-  end
-
   private
 
   def generate_csv(model_name, data)
