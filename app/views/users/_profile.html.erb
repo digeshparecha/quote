@@ -10,30 +10,12 @@
               <i class="bi bi-pencil-square"></i>
             <% end %>
           </div>
-          <div class="bid d-block">
-            <p class="text-secondary mb-1">Name</p>
-            <b><%= current_user.name %></b>
-          </div>
-          <div class="bid d-block">
-            <p class="text-secondary mb-1">Age</p>
-            <b><%= current_user.age %></b>
-          </div>
-          <div class="bid d-block">
-            <p class="text-secondary mb-1">Country</p>
-            <b><%= current_user.country %></b>
-          </div>
-          <div class="bid d-block">
-            <p class="text-secondary mb-1">Address</p>
-            <b><%= current_user.address %>, <br> <%= current_user.city %> - <%= current_user.zip %></b>
-          </div>
-          <div class="bid d-block">
-            <p class="text-secondary mb-1">Email</p>
-            <b><%= current_user.email %></b>
-          </div>
-          <div class="bid d-block">
-            <p class="text-secondary mb-1">About you</p>
-            <b><%= current_user.bio %></b>
-          </div>   
+          <% @user_presenter.details.each do |k,v|%>
+            <div class="bid d-block">
+              <p class="text-secondary mb-1"><%= k %></p>
+              <b><%= v %></b>
+            </div>
+          <% end %>
         <% end %>   
       </div>
       <div class="col-4">
