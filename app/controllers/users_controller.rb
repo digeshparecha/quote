@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_presenter, only: [:show, :update]
+  before_action :set_presenter, :set_user_policy, except: [:edit]
   
   def show
   end
@@ -18,5 +18,9 @@ class UsersController < ApplicationController
     
     def set_presenter
       @user_presenter = UserPresenter.new(current_user)
+    end
+    
+    def set_user_policy
+      @user_policy = UserPolicy.new(current_user)
     end
 end

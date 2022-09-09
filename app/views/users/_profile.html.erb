@@ -1,5 +1,5 @@
 <main class="container">
-  <% if current_user.profile_complete? %>
+  <% if @user_policy.profile_complete? %>
     <div class="row shadow-lg p-3 mb-5 bg-body rounded">
       <div class="col-8">
         <%= turbo_frame_tag current_user do %>
@@ -31,10 +31,10 @@
               Please complete your profile.
             </div>
             <div class="progress">
-              <div class="progress-bar bg-success" role="progressbar" style="width: <%=current_user.profile_complete.to_s + '%' %>" aria-valuenow="<%=current_user.profile_complete%>" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar bg-success" role="progressbar" style="width: <%= @user_policy.profile_complete.to_s + '%' %>" aria-valuenow="<%= @user_policy.profile_complete%>" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             <div class="mt-2">
-              <%= render "users/#{current_user.missing_profile_section}", f: f %>
+              <%= render "users/#{@user_policy.missing_profile_section}", f: f %>
             </div>
             <%= f.submit :save, class: "btn btn-success mt-3" %>
           <% end %>
