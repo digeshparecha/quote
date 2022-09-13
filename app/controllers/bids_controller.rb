@@ -2,7 +2,7 @@ class BidsController < ApplicationController
   before_action :set_bid, only: [:show, :edit, :update, :destroy]
 
   def index
-    @bids = Bid.includes(:line_item_dates).search(current_company.id, params).decorate
+    @bids = BidSearchQuery.search(current_company.id, params).decorate
   end
 
   def show
