@@ -2,8 +2,9 @@
   <div class="line-item">
     <div class="line-item__name">
       <%= line_item.name %>
-      <div class="line-item__description">
-        <%= simple_format line_item.description %>
+      <div class="line-item__description" data-controller="clipboard" >
+        <i class="bi bi-clipboard text-primary" data-action="click->clipboard#copy"></i>
+        <p data-clipboard-target="source" value="abc"><%= line_item.description %></p>
       </div>
     </div>
     <div class="line-item__quantity-price">
