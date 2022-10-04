@@ -114,3 +114,10 @@ i{
     cursor: pointer;
   }
 }
+.clipboard-button {
+  display: none;
+}
+
+.clipboard--supported .clipboard-button {
+  display: initial;
+}
