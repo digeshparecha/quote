@@ -1,17 +1,17 @@
 <%= simple_form_for [bid, line_item_date, line_item],
-                    html: { class: "form line-item line-item--form" } do |f| %>
+                    html: { class: "form line-item line-item--form", data: {controller: "formvalidator", target: "formvalidator.form", action: "submit->formvalidator#submitForm"} } do |f| %>
 
   <%= form_error_notification(line_item) %>
 
   <%= f.input :name,
               wrapper_html: { class: "line-item__name" },
-              input_html: { autofocus: true } %>
+              input_html: { autofocus: true }, required: true %>
   <%= f.input :quantity,
-              wrapper_html: { class: "line-item__quantity" } %>
+              wrapper_html: { class: "line-item__quantity" }, required: true %>
   <%= f.input :unit_price,
-              wrapper_html: { class: "line-item__price" } %>
+              wrapper_html: { class: "line-item__price" }, required: true %>
   <%= f.input :description,
-              wrapper_html: { class: "line-item__description" } %>
+              wrapper_html: { class: "line-item__description" }, required: true %>
 
   <div class="line-item__actions">
     <%= link_to bid_path(bid), class: "btn btn-danger" do %>

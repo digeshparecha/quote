@@ -1,7 +1,7 @@
-<%= simple_form_for bid, html: { class: "bid form" } do |f| %>
+<%= simple_form_for bid, html: { class: "bid form", data: {controller: "formvalidator", target: "formvalidator.form", action: "submit->formvalidator#submitForm"} } do |f| %>
   <%= form_error_notification(bid) %>
 
-  <%= f.input :name, input_html: { autofocus: true } %>
+  <%= f.input :name, input_html: { autofocus: true }, required: true %>
     <%= link_to bids_path, class: "btn btn-danger"  do %>
       <i class="bi bi-x-square"></i>
     <% end %>

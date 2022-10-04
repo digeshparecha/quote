@@ -3,12 +3,15 @@
 // ./bin/rails generate stimulus controllerName
 
 import { application } from "./application"
+
 import ClipboardController from "./clipboard_controller"
-import RemovalsController from "./removals_controller"
-import SearchController from "./search_controller"
-
-
-
 application.register("clipboard", ClipboardController)
+
+import FormvalidatorController from "./formvalidator_controller"
+application.register("formvalidator", FormvalidatorController)
+
+import RemovalsController from "./removals_controller"
 application.register("removals", RemovalsController)
+
+import SearchController from "./search_controller"
 application.register("search", SearchController)

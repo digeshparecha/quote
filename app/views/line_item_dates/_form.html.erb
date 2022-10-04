@@ -1,7 +1,7 @@
-<%= simple_form_for [bid, line_item_date], html: { class: "form line-item-date" } do |f| %>
+<%= simple_form_for [bid, line_item_date], html: { class: "form line-item-date", data: {controller: "formvalidator", target: "formvalidator.form", action: "submit->formvalidator#submitForm"} } do |f| %>
   <%= form_error_notification(line_item_date) %>
 
-  <%= f.input :date, html5: true, input_html: { autofocus: true } %>
+  <%= f.input :date, html5: true, input_html: { autofocus: true }, required: true %>
   <%= link_to bid_path(bid), class: "btn btn-danger" do %>
     <i class="bi bi-x-square"></i>
   <% end %>
