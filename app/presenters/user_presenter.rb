@@ -8,7 +8,7 @@ class UserPresenter
       "Name": @user.name,
       "Age": @user.age,
       "Country": @user.country,
-      "Address": "#{@user.address}, #{@user.city} - #{@user.zip}",
+      "Address": AddressValue.new(@user).full_address,
       "Email": @user.email,
       "About You": @user.bio
     }
