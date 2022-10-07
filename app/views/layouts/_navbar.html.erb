@@ -6,14 +6,14 @@
     <div class="navbar__name">
       <%= current_user.name || current_user.email %>
     </div>
-    <%= link_to "Profile", user_path(current_user), class: "btn btn-dark me-2" %>
+    <%= link_to "Profile", user_path(current_user), class: "btn btn-outline-light me-2" %>
     <%= button_to "Sign out",
                   destroy_user_session_path,
                   method: :delete,
-                  class: "btn btn-primary" %>
+                  class: "btn btn-outline-danger" %>
   <% else %>
     <%= link_to "Sign in",
                 new_user_session_path,
-                class: "btn btn-dark navbar__right" %>
+                class: "btn btn-success navbar__right" %>
   <% end %>
 </header>
