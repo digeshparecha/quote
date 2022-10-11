@@ -7,3 +7,4 @@ then
 fi
 
 foreman start -f Procfile.dev "$@"
+fa: yarn build:css:fontawesome --watch
