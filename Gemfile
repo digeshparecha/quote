@@ -80,3 +80,5 @@ gem "devise", "~> 4.8.1"
 gem "stimulus-rails" 
 gem 'country_select'
 gem 'draper'
+gem 'graphql'
+gem "graphiql-rails"

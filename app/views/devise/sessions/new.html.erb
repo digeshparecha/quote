@@ -1,9 +1,9 @@
 <main class="container shadow-lg p-3 mb-5 bg-body rounded">
   <h2 class="text-center">Log in</h2>
 
-  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "form line-item line-item--form justify-content-center"}, data: {controller: "formvalidator", target: "formvalidator.form", action: "submit->formvalidator#submitForm"}) do |f| %>
+  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "form line-item line-item--form justify-content-center py-3"}, data: {controller: "formvalidator", target: "formvalidator.form", action: "submit->formvalidator#submitForm"}) do |f| %>
   
-    <div class = "row">
+    <div class = "row justify-content-center">
       <div class="col-12 mb-2">
         <%= f.input :email,
                     required: true,
@@ -15,8 +15,8 @@
                     required: true,
                     input_html: { autocomplete: "current-password" } %>
       </div>
-      <div class="col-12 text-center">
-        <%= f.button :submit, "Log in", class: "btn btn-success" %>
+      <div class="col-4 text-center">
+        <%= f.button :submit, "Log in", class: "btn btn-success w-100" %>
       </div>
     </div>
   
