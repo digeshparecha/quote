@@ -7,19 +7,18 @@ module Types
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
 
-    # TODO: remove me
-    field :test_field, String, null: false, description: "An example field added by the generator" do
-      argument :name, String, required: true
-    end
-    def test_field(name:)
-      "Hello #{name}!"
-    end
-
     field :user, Types::UserType, null: true, description: "Will return the single user detail" do
       argument :id, ID, required: true
     end
     def user(id:)
       User.find(id)
+    end
+
+    field :bid, Types::BidType, null: true, description: "Will return the single bid detail" do
+      argument :id, ID, required: true
+    end
+    def bid(id:)
+      Bid.includes(:line_item_dates).find(id)
     end
 
   end
