@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: line_item_dates
+#
+#  id         :bigint           not null, primary key
+#  bid_id     :bigint           not null
+#  date       :date
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
 require "test_helper"
 
 class LineItemDateTest < ActiveSupport::TestCase
