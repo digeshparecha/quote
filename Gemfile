@@ -83,3 +83,4 @@ gem 'country_select'
 gem 'draper'
 gem 'graphql'
 gem "graphiql-rails"
+gem 'search_object_graphql'

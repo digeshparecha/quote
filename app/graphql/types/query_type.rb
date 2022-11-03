@@ -21,6 +21,7 @@ module Types
       Bid.includes(:line_item_dates).find(id)
     end
 
+    field :all_bids, resolver: Resolvers::BidSearch
   end
 end
 
