@@ -1,9 +1,9 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!, unless: :devise_controller?
-  before_action :set_notification
+  before_action :set_user_notification
 
-  def set_notification
-    @notifications = @current_user.notifications.newest_first if current_company
+  def set_user_notification
+    @notifications = @current_user.notifications.unread if current_company
   end
 
   private

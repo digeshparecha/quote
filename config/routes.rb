@@ -11,4 +11,5 @@ Rails.application.routes.draw do
     end
   end
   resources :users, only: [:update, :show, :edit]
+  resources :notifications, only: [:destroy]
 end
