@@ -11,13 +11,21 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
+  <body data-controller="notification">
+    <div class="overlay d-flex justify-content-center align-items-center hide" id="loading-spinner">
+      <div class="spinner-border text-white fs-4" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
     <%= render "layouts/navbar" %>
 
     <div id="flash" class="flash">
       <%= render "layouts/flash" %>
     </div>
-    
+    <% if user_signed_in? %>
+      <%= render "layouts/notification_modal"%>
+      <%= render "layouts/side_navbar"%>
+    <% end %>
     <%= yield %>
   </body>
 </html>

@@ -84,3 +84,4 @@ gem 'draper'
 gem 'graphql'
 gem "graphiql-rails"
 gem 'search_object_graphql'
+gem "noticed", "~> 1.6"

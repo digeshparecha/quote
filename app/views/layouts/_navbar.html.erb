@@ -1,16 +1,17 @@
 <header class="navbar">
   <% if user_signed_in? %>
     <div class="navbar__brand">
-       <%= current_company.name %>
+        <i class="bi bi-list me-2" data-bs-toggle="modal" data-bs-target="#sideNavBarModal"></i>
+        <%= current_company.name %>
     </div>
     <div class="navbar__name">
+      <i class="bi bi-bell-fill me-3 position-relative" data-bs-toggle="modal" data-bs-target="#notificationModal" >
+        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle visually-hidden" data-notification-target="notificationBadge">
+          <span class="visually-hidden">New alerts</span>
+        </span>
+      </i>
       <%= current_user.name || current_user.email %>
     </div>
-    <%= link_to "Profile", user_path(current_user), class: "btn btn-outline-light me-2" %>
-    <%= button_to "Sign out",
-                  destroy_user_session_path,
-                  method: :delete,
-                  class: "btn btn-outline-danger" %>
   <% else %>
     <%= link_to "Sign in",
                 new_user_session_path,

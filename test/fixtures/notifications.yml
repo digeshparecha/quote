@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  recipient: accountant
+  recipient_type: Recipient
+  type: "BidNotification"
+  params:
+  read_at: 2023-01-17 15:35:36
+
+two:
+  recipient: accountant
+  recipient_type: Recipient
+  type: "BidNotification"
+  params:
+  ead_at: 2023-01-17 15:35:36
