@@ -12,6 +12,8 @@ Steps to Setup Project
 * clone the repo
 * Create database.yml file
 * run 'bundle install' to install all require gem
+* run 'yarn install' to install js library
+* Create the database.yml file
 * run 'rails db:setup'
 * run 'bin/dev' to start the server
 * visit 'http://localhost:3000/'
