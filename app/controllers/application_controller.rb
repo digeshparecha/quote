@@ -6,6 +6,10 @@ class ApplicationController < ActionController::Base
     @notifications = @current_user.notifications.unread if current_company
   end
 
+  def after_sign_out_path_for(resource_or_scope)
+    new_user_session_path
+  end
+
   private
 
   def current_company

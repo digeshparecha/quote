@@ -22,12 +22,13 @@
 @import "components/line_item";
 @import "components/bid_total";
 @import "components/notification";
+@import "components/backdrop";
 
 // Layouts
 @import "layouts/container";
 @import "layouts/header";
 @import "layouts/body";
-@import "layouts/right_modal";
+@import "layouts/modal";
 
 // Utilities
 @import "utilities/margins";
